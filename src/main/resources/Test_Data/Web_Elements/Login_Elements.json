@@ -1,0 +1,10 @@
+{
+  "Login_Page_Web_Elements": [
+    {
+      "User_Name": "//input[@autocomplete='UserName']",
+      "Password": "//input[@type='password']",
+      "Login_Button": "//button[contains(text(),'LOG IN')]"
+
+    }
+  ]
+}
