@@ -29,8 +29,8 @@ public static void Initalization() {
             //Executer.Method_And_Data_Validation();
             Reusable_Library.Get_Value_From_Property_File("URL");
 
-//            Launch_Browser();
-//            Call_TestCase_From_Action_keywords();
+            Launch_Browser();
+            Call_TestCase_From_Action_keywords();
 
         } catch (IOException | NoSuchMethodException | InvocationTargetException | InstantiationException |
                  IllegalAccessException e) {
