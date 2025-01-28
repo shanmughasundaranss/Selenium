@@ -27,7 +27,7 @@ public class Driver_Script extends Excel_Utilities {
             get_Column_Values();
             Validator();
             //Executer.Method_And_Data_Validation();
-            Reusable_Library.Get_Value_From_Property_File("URL");
+            Reusable_Library.Get_Value_Froperty_File("URL");
 
             Launch_Browser();
             Call_TestCase_From_Action_keywords();
