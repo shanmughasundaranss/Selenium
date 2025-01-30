@@ -54,7 +54,7 @@ public class Excel_Utilities {
                 for (int i = 0; i < methods.length; i++) {
                     String Listofmethods = methods[i].toString();
                     String Trim_Class_Name = Listofmethods.replace("public static void Config.Action_Keywords.", "").trim();
-                    System.out.println("Method Name Before Stored: "+ Trim_Class_Name);
+                    System.out.println("Method Name Before Adding to List: "+ Trim_Class_Name);
                     aList.add(Trim_Class_Name);
                 }
             } catch (Throwable e) {
@@ -73,7 +73,7 @@ public static  void Validator () {
                     //System.out.println("check :" + value.charAt(i));
                 }
             } else {
-                                     System.out.println("Methods Count: null | Length: 0");
+                System.out.println("Methods Count: null | Length: 0");
             }
         }
     } else {
@@ -97,8 +97,8 @@ public static  void Validator () {
     }
 ///
 
-    for (String item : Column_Values1) {
-        if (item.equals(aList)) {
+
+        if (aList.contains(Column_Values1)) {
             // logic here
             System.out.println("pass");
 
@@ -109,4 +109,4 @@ public static  void Validator () {
 
     }
 }
-        }
+
