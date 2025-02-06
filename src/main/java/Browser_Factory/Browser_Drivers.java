@@ -30,10 +30,15 @@ public static void Choose_Browser(String Run_Browser) throws IOException {
         // Set up WebDriver for Chrome
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("incognito");
 
         // Add headless argument if needed
-        Boolean Chrome_Headless_mode = Get_Value_From_Property_File("Browser").equals("chrome");
-        if (Get_Value_From_Property_File("Browser").equals("chrome")==true) {
+
+
+        String Headless_mode = Get_Value_From_Property_File("HeadLess_Mode");
+        System.out.println("Headless_mode: " + Headless_mode);
+
+        if (Headless_mode.equals("Yes")==true) {
             options.addArguments("--headless");
             options.addArguments("--disable-gpu"); // Optional: Disables GPU acceleration for headless mode
             options.addArguments("--window-size=1920x1080"); // Optional: To avoid errors related to screen size in headless mode
@@ -54,8 +59,8 @@ public static void Choose_Browser(String Run_Browser) throws IOException {
         FirefoxOptions options = new FirefoxOptions();
 
         // Add headless argument if needed
-            Boolean Headless_mode = Get_Value_From_Property_File("Browser").equals("chrome");
-        if (Headless_mode==true) {
+           // Boolean Headless_mode = Get_Value_From_Property_File("HeadLess_Mode").equals("chrome");
+        if (Get_Value_From_Property_File("HeadLess_Mode").equals("Yes")==true) {
             options.addArguments("--headless");
         }
 

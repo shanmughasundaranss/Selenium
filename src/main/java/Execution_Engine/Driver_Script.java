@@ -35,8 +35,8 @@ public static void BeforeSuite() throws IOException {
 }
 @BeforeTest
 public static void BeforeTest() throws IOException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-   // get_Column_Values();
-   // Validator();
+    get_Column_Values();
+    Validator();
 
 
 
@@ -62,7 +62,7 @@ public static void Initalization() {
     //Executer.Method_And_Data_Validation();
     //Get_Value_From_Property_File("URL");
 //            Launch_Browser();
-    Action_Keywords.TestSuite1();
+    //Action_Keywords.TestSuite1();
 
 }
 
