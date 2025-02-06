@@ -4,6 +4,7 @@ import Browser_Factory.Browser_Drivers;
 import Config.Action_Keywords;
 import ReUsable_Codes.Reusable_Library;
 import Utilities.Excel_Utilities;
+import org.testng.Reporter;
 import org.testng.annotations.*;
 
 import java.io.IOException;
@@ -26,9 +27,11 @@ public class Driver_Script extends Excel_Utilities {
 public static void BeforeSuite() throws IOException {
 
     Browser_Drivers.Choose_Browser(Get_Value_From_Property_File("Browser"));
+    Reporter.log("Browser Initailized", true);
     driver.get(Get_Value_From_Property_File("URL"));
+    Reporter.log("Extracted Application URL from Property File", true);
    //String one =  Get_Value_From_Property_File("Headless_Mode");
-    System.out.println("Headless_value: "+ Get_Value_From_Property_File("Browser1") );
+    //System.out.println("Headless_value: "+ Get_Value_From_Property_File("Browser1") );
 
 
 
@@ -56,6 +59,7 @@ public static void BeforeMethod(){
     }
 @Test
 public static void Initalization() {
+    Reporter.log("Browser Initailized", true);
 
     //Driver_Script Executer = new Driver_Script();
 
