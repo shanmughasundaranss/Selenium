@@ -16,6 +16,7 @@ public class Excel_Utilities {
     public static String Sheet_Name = "Test_case";
     public static List<String> Column_Values1 = new ArrayList<String>();
     public static List<String> aList = new ArrayList<String>();
+    public static  String Trimmed_Method_Name;
 
 
     public static void setExcelFile(String path) throws IOException {
@@ -43,70 +44,91 @@ public class Excel_Utilities {
             Column_Values1.add(Row_Cell);
         }
     }
-        public static void Get_Methods () {
-            try {
-                Class<?> clazz = Action_Keywords.class;
-                Method[] methods = clazz.getDeclaredMethods();
-                if (aList == null) {
-                    aList = new ArrayList<String>();
-                }
 
-                for (int i = 0; i < methods.length; i++) {
-                    String Listofmethods = methods[i].toString();
-                    String Trim_Class_Name = Listofmethods.replace("public static void Config.Action_Keywords.", "").trim();
-                    System.out.println("Method Name Before Stored: "+ Trim_Class_Name);
-                    aList.add(Trim_Class_Name);
-                }
-            } catch (Throwable e) {
-                System.err.println(e);
+    public static void Get_Methods() {
+        try {
+            Class<?> clazz = Action_Keywords.class;
+            Method[] methods = clazz.getDeclaredMethods();
+            if (aList == null) {
+                aList = new ArrayList<String>();
             }
-        }
 
-public static  void Validator () {
-
-    if (Column_Values1 != null && !Column_Values1.isEmpty()) {
-        for (String value : Column_Values1) {
-            if (value != null) {
-                int length = value.length();
-                System.out.println("Excel Data  Count After Stored: " + value + " | Length: " + length);
-                for (int i = 0; i < value.length(); i++) {
-                    //System.out.println("check :" + value.charAt(i));
-                }
-            } else {
-                                     System.out.println("Methods Count: null | Length: 0");
+            for (int i = 0; i < methods.length; i++) {
+                String Listofmethods = methods[i].toString();
+                String Trim_Class_Name = Listofmethods.replace("public static void Config.Action_Keywords.", "").trim();
+                System.out.println("Method Name Before Adding to List: " + Trim_Class_Name);
+                aList.add(Trim_Class_Name);
             }
+        } catch (Throwable e) {
+            System.err.println(e);
         }
-    } else {
-        System.out.println("aList is empty or null.");
     }
-///
-    if (aList != null && !aList.isEmpty()) {
-        for (String value : aList) {
-            if (value != null) {
-                int length = value.length();
-                System.out.println("Method Name  Count After Stored: " + value + " | Length: " + length);
-                for (int i = 0; i < value.length(); i++) {
-                    //System.out.println("check :" + value.charAt(i));
+
+    public static void Validator() {
+//        if (Column_Values1 != null && !Column_Values1.isEmpty()) {
+//            for (String value : Column_Values1) {
+//                if (value != null) {
+//                    int length = value.length();
+//                    System.out.println("Excel Data Count After Stored: " + value + " | Length: " + length);
+//                } else {
+//                    System.out.println("Methods Count: null | Length: 0");
+//                }
+//            }
+//        } else {
+//            System.out.println("Column_Values1 is empty or null.");
+//        }
+//
+//        if (aList != null && !aList.isEmpty()) {
+//            for (String value : aList) {
+//                if (value != null) {
+//                    int length = value.length();
+//                    System.out.println("Method Name Count After Stored: " + value + " | Length: " + length);
+//                } else {
+//                    System.out.println("Methods Name: null | Length: 0");
+//                }
+//            }
+//        } else {
+//            System.out.println("aList is empty or null.");
+//        }
+
+
+        // Print the method names in Action_Keywords
+
+        Method[] methods = Action_Keywords.class.getMethods();
+        for (Method m : methods) {
+            System.out.println("Available method: " + m.getName());
+
+        }
+        if (Column_Values1 != null && aList != null) {
+            for (String value : Column_Values1) {
+               System.out.println( "Replaced:"+ value);
+               // Trim any extra spaces
+
+                // Check if the method exists in Action_Keywords class
+                if (aList.contains(value)) {
+                     Trimmed_Method_Name  = value.trim().replace("()", "");
+
+                    System.out.println("Value " + Trimmed_Method_Name + " from Column_Values1 is present in aList.");
+
+                    try {
+                        // Use reflection to check for the method
+                        Method method = Action_Keywords.class.getMethod(Trimmed_Method_Name); // Get the method by name
+                        System.out.println("Check: " + method);
+
+                        // Call the method via reflection (assuming it's static)
+                        method.invoke(null); // 'null' because it's a static method
+
+                    } catch (NoSuchMethodException e) {
+                        System.err.println("No such method: " + Trimmed_Method_Name + " in Action_Keywords.");
+                    } catch (IllegalAccessException e) {
+                        System.err.println("Illegal access to method: " + Trimmed_Method_Name + " in Action_Keywords.");
+                    } catch (InvocationTargetException e) {
+                        System.err.println("Error invoking method " + Trimmed_Method_Name + ": " + e.getCause());
+                    }
+                } else {
+                    System.out.println("Value " + Trimmed_Method_Name + " from Column_Values1 is NOT present in aList.");
                 }
-            } else {
-                System.out.println("Methods Name: null | Length: 0");
             }
         }
-    } else {
-        System.out.println("aList is empty or null.");
-    }
-///
-
-    for (String item : Column_Values1) {
-        if (item.equals(aList)) {
-            // logic here
-            System.out.println("pass");
-
-        } else {
-            System.out.println("Fail");
-
-        }
-
     }
 }
-        }

@@ -24,10 +24,10 @@ public static String Get_Value_From_Property_File(String Value) throws IOExcepti
         properties = new Properties();
 
         try {
-            FileInputStream = new FileInputStream("C:\\Users\\Shanmugasundharam\\Documents\\Selenium_Java_New_Framework\\src\\main\\resources\\Test_Data\\Framework.properties");
+            FileInputStream = new FileInputStream("C:\\Users\\Shanmugasundharam\\Git\\Selenium_Hybrid_Framework\\Selenium\\src\\main\\resources\\Test_Data\\Framework.properties");
             properties.load(FileInputStream);
             propertyValue = properties.getProperty(Value);
-            System.out.println("Step 1: URL of the Web Application that going to be automated " + propertyValue);
+            System.out.println("Value " + propertyValue);
 
 
         } finally {
