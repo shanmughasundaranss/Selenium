@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.io.FileInputStream;
@@ -41,7 +42,7 @@ public static String Json_Extractor_Elements (String Path, String Body, String V
         String extractedValue = "";
 
         try {
-            JsonNode rootNode = objectMapper.readTree(new File("C:\\Users\\Shanmugasundharam\\Documents\\Selenium_Java_New_Framework\\src\\main\\resources\\Test_Data\\\\Web_Elements\\" + Path + ".json"));
+            JsonNode rootNode = objectMapper.readTree(new File("C:\\Users\\Shanmugasundharam\\Git\\Selenium_Hybrid_Framework\\Selenium\\src\\main\\resources\\Test_Data\\Web_Elements\\" + Path + ".json"));
             JsonNode usersNode = rootNode.path(Body);
 
             for (JsonNode userNode : usersNode) {
@@ -100,6 +101,13 @@ public static void Click_Element(String Locator) {
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Locator)));
     WebElement Element =  driver.findElement(By.xpath(Locator));
     Element.click();
+}
+
+public static void Explicit_Wait(String Locator) {
+    Wait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Locator)));
+    wait.until((ExpectedConditions.elementToBeClickable(By.xpath(Locator))));
+
 }
 
     }
