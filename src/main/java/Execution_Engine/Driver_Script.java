@@ -10,6 +10,8 @@ import org.testng.annotations.*;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+
+import static Browser_Factory.Browser_Drivers.Initailize_Driver;
 import static Browser_Factory.Browser_Drivers.driver;
 import static ReUsable_Codes.Reusable_Library.Get_Value_From_Property_File;
 
@@ -25,21 +27,14 @@ public class Driver_Script extends Excel_Utilities {
 
 @BeforeSuite
 public static void BeforeSuite() throws IOException {
-
-    Browser_Drivers.Choose_Browser(Get_Value_From_Property_File("Browser"));
-    Reporter.log("Browser Initailized", true);
-    driver.get(Get_Value_From_Property_File("URL"));
-    Reporter.log("Extracted Application URL from Property File", true);
-   //String one =  Get_Value_From_Property_File("Headless_Mode");
-    //System.out.println("Headless_value: "+ Get_Value_From_Property_File("Browser1") );
-
+    Initailize_Driver();
 
 
 }
 @BeforeTest
 public static void BeforeTest() throws IOException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-    get_Column_Values();
-    Validator();
+    Excel_Testcases();
+    Testcase_Validator();
 
 
 
@@ -61,13 +56,6 @@ public static void BeforeMethod(){
 public static void Initalization() {
     Reporter.log("Browser Initailized", true);
 
-    //Driver_Script Executer = new Driver_Script();
-
-    //Executer.Method_And_Data_Validation();
-    //Get_Value_From_Property_File("URL");
-//            Launch_Browser();
-    //Action_Keywords.TestSuite1();
-
 }
 
 
@@ -87,14 +75,10 @@ public static void AfterClass(){
 @AfterTest
 public static void AfterTest(){
 
-
-
     }
 
 @AfterSuite
 public static void AfterSuite(){
-
-
 
     }
     public static void Call_TestCase_From_Action_keywords () throws IOException {
@@ -102,11 +86,6 @@ public static void AfterSuite(){
 
     }
 public static void Launch_Browser () throws IOException {
-
-
-
-
-
 
 }
 }
