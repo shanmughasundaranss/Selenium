@@ -25,7 +25,7 @@ public static String Get_Value_From_Property_File(String Value) throws IOExcepti
         properties = new Properties();
 
         try {
-            FileInputStream = new FileInputStream("C:\\Users\\Shanmugasundharam\\Git\\Selenium_Hybrid_Framework\\Selenium\\src\\main\\resources\\Test_Data\\Framework.properties");
+            FileInputStream = new FileInputStream("C:\\Users\\Shanmugasundharam\\Git\\S2_Application\\Selenium\\src\\main\\resources\\Test_Data\\Framework.properties");
             properties.load(FileInputStream);
             propertyValue = properties.getProperty(Value);
             System.out.println("Value " + propertyValue);
@@ -42,7 +42,7 @@ public static String Json_Extractor_Elements (String Path, String Body, String V
         String extractedValue = "";
 
         try {
-            JsonNode rootNode = objectMapper.readTree(new File("C:\\Users\\Shanmugasundharam\\Git\\Selenium_Hybrid_Framework\\Selenium\\src\\main\\resources\\Test_Data\\Web_Elements\\" + Path + ".json"));
+            JsonNode rootNode = objectMapper.readTree(new File("C:\\Users\\Shanmugasundharam\\Git\\S2_Application\\Selenium\\src\\main\\resources\\Test_Data\\Web_Elements\\" + Path + ".json"));
             JsonNode usersNode = rootNode.path(Body);
 
             for (JsonNode userNode : usersNode) {
