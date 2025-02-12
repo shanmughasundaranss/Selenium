@@ -1,19 +1,13 @@
 package Execution_Engine;
 
-import Browser_Factory.Browser_Drivers;
-import Config.Action_Keywords;
-import ReUsable_Codes.Reusable_Library;
+
 import Utilities.Excel_Utilities;
 import org.testng.Reporter;
 import org.testng.annotations.*;
-
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-import static Browser_Factory.Browser_Drivers.Initailize_Driver;
-import static Browser_Factory.Browser_Drivers.driver;
-import static ReUsable_Codes.Reusable_Library.Get_Value_From_Property_File;
 
 public class Driver_Script extends Excel_Utilities {
 
@@ -27,7 +21,7 @@ public class Driver_Script extends Excel_Utilities {
 
 @BeforeSuite
 public static void BeforeSuite() throws IOException {
-    Initailize_Driver();
+    //Initailize_Driver();
 
 
 }

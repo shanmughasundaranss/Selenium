@@ -16,7 +16,8 @@ public class Excel_Utilities {
     public static String Sheet_Name = "Test_case";
     public static List<String> Get_Testcases_From_Excel = new ArrayList<String>();
     public static List<String> Get_Testcases_From_ActionKeyword = new ArrayList<String>();
-    public static  String Trimmed_Method_Name;
+    public static String Trimmed_Excel_Testcases_Name;
+    public static String Trimmed_Action_Keyword_Method_Name;
 
 
 public static void setExcelFile(String path) throws IOException {
@@ -31,7 +32,7 @@ public static void Excel_Testcases() throws IOException, NoSuchMethodException, 
         Excel_Utilities.setExcelFile(Get_Driver_File_Path);
         sheet = workbook.getSheet(Sheet_Name);
         int row = sheet.getLastRowNum();
-        System.out.println("Step 2 :Total Count Of the Values in the ACTION KEYWORD Row : " + row);
+        System.out.println("Total Count Of the Values in the ACTION KEYWORD Row : " + row);
         Get_Testcases_From_Excel.clear();
         ActionKeyword_Test_Cases();
         for (int a = 1; a <= row; a++) {
@@ -63,41 +64,54 @@ public static void ActionKeyword_Test_Cases() {
         }
     }
 
-    public static void Testcase_Validator() {
+public static void Testcase_Validator() {
 
         Method[] methods = Action_Keywords.class.getMethods();
         for (Method m : methods) {
             System.out.println("Available method: " + m.getName());
 
         }
-        if (Get_Testcases_From_Excel != null && Get_Testcases_From_ActionKeyword != null) {
-            for (String value : Get_Testcases_From_Excel) {
-               System.out.println( "Replaced:"+ value);
-               // Trim any extra spaces
+        if (Get_Testcases_From_ActionKeyword != null) {
+            for (String ActionKeyword_Values : Get_Testcases_From_ActionKeyword) {
+                if (ActionKeyword_Values != null) {
+                    System.out.println("Finaly Value of ActionKeyword Testcase:" + ActionKeyword_Values);
+                    if (Get_Testcases_From_Excel != null) {
+                        for (String Excel_Values : Get_Testcases_From_Excel) {
+                            if (Excel_Values != null) {
+                                System.out.println("Finaly Value of Excel Testcase:" + Excel_Values);
+                                // Trim any extra spaces
+                                Trimmed_Excel_Testcases_Name = Excel_Values.trim().replace("()", "");
+                                // Check if the method exists in Action_Keywords class
+                                if (Get_Testcases_From_ActionKeyword.contains(Excel_Values)) {
+                                    System.out.println("Value " + Excel_Values + " from Column_Values1 is present in aList.");
 
-                // Check if the method exists in Action_Keywords class
-                if (Get_Testcases_From_ActionKeyword.contains(value)) {
-                     Trimmed_Method_Name  = value.trim().replace("()", "");
+                                    try {
+                                        // Use reflection to check for the method
+                                        Method method = Action_Keywords.class.getMethod(Trimmed_Excel_Testcases_Name); // Get the method by name
+                                        System.out.println("Check: " + method);
 
-                    System.out.println("Value " + Trimmed_Method_Name + " from Column_Values1 is present in aList.");
+                                        // Call the method via reflection (assuming it's static)
+                                        method.invoke(null); // 'null' because it's a static method
 
-                    try {
-                        // Use reflection to check for the method
-                        Method method = Action_Keywords.class.getMethod(Trimmed_Method_Name); // Get the method by name
-                        System.out.println("Check: " + method);
-
-                        // Call the method via reflection (assuming it's static)
-                        method.invoke(null); // 'null' because it's a static method
-
-                    } catch (NoSuchMethodException e) {
-                        System.err.println("No such method: " + Trimmed_Method_Name + " in Action_Keywords.");
-                    } catch (IllegalAccessException e) {
-                        System.err.println("Illegal access to method: " + Trimmed_Method_Name + " in Action_Keywords.");
-                    } catch (InvocationTargetException e) {
-                        System.err.println("Error invoking method " + Trimmed_Method_Name + ": " + e.getCause());
+                                    } catch (NoSuchMethodException e) {
+                                        System.err.println("No such method: " + Trimmed_Excel_Testcases_Name + " in Action_Keywords.");
+                                    } catch (IllegalAccessException e) {
+                                        System.err.println("Illegal access to method: " + Trimmed_Excel_Testcases_Name + " in Action_Keywords.");
+                                    } catch (InvocationTargetException e) {
+                                        if (e.getCause() instanceof IOException) {
+                                            System.err.println("IOException occurred while invoking method " + Trimmed_Excel_Testcases_Name + ": " + e.getCause());
+                                        } else {
+                                            System.err.println("Error invoking method " + Trimmed_Excel_Testcases_Name + ": " + e.getCause());
+                                        }
+                                    }
+                                } else {
+                                    System.out.println("Value " + Trimmed_Excel_Testcases_Name + " from Column_Values1 is NOT present in aList.");
+                                }
+                            } else {
+                                System.out.println("Value is null and cannot be processed.");
+                            }
+                        }
                     }
-                } else {
-                    System.out.println("Value " + Trimmed_Method_Name + " from Column_Values1 is NOT present in aList.");
                 }
             }
         }

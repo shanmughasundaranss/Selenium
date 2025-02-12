@@ -1,22 +1,15 @@
 package Browser_Factory;
 
 
-import ReUsable_Codes.Reusable_Library;
+
 import org.openqa.selenium.WebDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.logging.LogEntries;
-import org.openqa.selenium.logging.LogEntry;
-import org.openqa.selenium.logging.LogType;
 import org.testng.Reporter;
-
 import java.io.IOException;
-import java.security.PublicKey;
-import java.util.Map;
-
 import static ReUsable_Codes.Reusable_Library.Get_Value_From_Property_File;
 
 
