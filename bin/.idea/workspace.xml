@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a9a8e733-a06c-4b30-a6ed-6f9d0112c585" name="Changes" comment="HeadLess">
+      <change afterPath="$USER_HOME$/Desktop/Automation/RF/S2/S2.iml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/Desktop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Test_Listners.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Runner_Files/testng.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Browser_Factory/Browser_Drivers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Browser_Factory/Browser_Drivers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Execution_Engine/Driver_Script.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;shanmughasundaranss&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/shanmughasundaranss/Selenium_Java_New_Framework_Git.git&quot;,
+    &quot;accountId&quot;: &quot;381c998a-bed7-465c-8b45-ba93dd15c205&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2sG2yLBYPBxKqDIfgM6BuLU3s2P" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.C:/Users/Shanmugasundharam/Git/Selenium_Hybrid_Framework/Selenium/Runner_Files/testng.xml.executor": "Run",
+    "TestNG.C:/Users/Shanmugasundharam/Git/Selenium_Hybrid_Framework/Selenium/testng.xml.executor": "Run",
+    "TestNG.Driver_Script.Initalization.executor": "Run",
+    "TestNG.Driver_Script.executor": "Run",
+    "git-widget-placeholder": "Updated__Code",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Shanmugasundharam/Desktop/Test_API",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Shanmugasundharam\Git\Selenium_Hybrid_Framework\Selenium\Runner_Files" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.C:/Users/Shanmugasundharam/Git/Selenium_Hybrid_Framework/Selenium/testng.xml">
+    <configuration name="C:/Users/Shanmugasundharam/Git/Selenium_Hybrid_Framework/Selenium/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Selenium_Java" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Driver_Script" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Selenium_Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Execution_Engine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Execution_Engine" />
+      <option name="MAIN_CLASS_NAME" value="Execution_Engine.Driver_Script" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Driver_Script.Initalization" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Selenium_Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Execution_Engine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Execution_Engine" />
+      <option name="MAIN_CLASS_NAME" value="Execution_Engine.Driver_Script" />
+      <option name="METHOD_NAME" value="Initalization" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.C:/Users/Shanmugasundharam/Git/Selenium_Hybrid_Framework/Selenium/testng.xml" />
+        <item itemvalue="TestNG.Driver_Script.Initalization" />
+        <item itemvalue="TestNG.Driver_Script" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9a8e733-a06c-4b30-a6ed-6f9d0112c585" name="Changes" comment="" />
+      <created>1738067843473</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738067843473</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="HeadLess" />
+    <option name="LAST_COMMIT_MESSAGE" value="HeadLess" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/Browser_Factory/Browser_Drivers.java</url>
+          <line>23</line>
+          <properties class="Browser_Factory.Browser_Drivers" method="Choose_Browser">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

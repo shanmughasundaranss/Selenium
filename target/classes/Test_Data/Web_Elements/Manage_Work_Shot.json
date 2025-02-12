@@ -1,0 +1,14 @@
+{
+  "Shot": [
+    {
+      "Manage_Work": "//a[@id='manage-work']//div//p[contains(text(),'Manage Work')]",
+      "shot": "//p[contains(text(),'Shot')]",
+      "Fetch_Show_DropDown": "(//*[contains(@class,'MuiSvgIcon-root') and @data-testid='ExpandMoreIcon'])[2]",
+      "Fetch_My_Show_Toggel": "(//*[contains(@class,'MuiButtonBase-root MuiSwitch-switchBase')])[2]",
+      "Fetch_Show_Search_Bar": "(//input[@placeholder='Search text...'])[1]"
+
+
+
+    }
+  ]
+}

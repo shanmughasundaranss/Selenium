@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a9a8e733-a06c-4b30-a6ed-6f9d0112c585" name="Changes" comment="HeadLess">
+      <change afterPath="$USER_HOME$/Desktop/UI/pom.xml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/UI/src/main/java/com/test/automation/base/APITestBase.java" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/UI/src/main/java/com/test/automation/base/TestBase.java" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/UI/src/main/java/com/test/automation/models/User.java" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/UI/src/main/java/com/test/automation/pages/LoginPage.java" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/UI/src/main/java/com/test/automation/utils/APIUtils.java" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/UI/src/main/java/com/test/automation/utils/WebDriverUtils.java" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/UI/src/test/java/com/test/automation/tests/LoginTest.java" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/UI/src/test/java/com/test/automation/tests/UserAPITest.java" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/UI/src/test/resources/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;shanmughasundaranss&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/shanmughasundaranss/Selenium_Java_New_Framework_Git.git&quot;,
+    &quot;accountId&quot;: &quot;381c998a-bed7-465c-8b45-ba93dd15c205&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2sG2yLBYPBxKqDIfgM6BuLU3s2P" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.C:/Users/Shanmugasundharam/Git/Selenium_Hybrid_Framework/Selenium/Runner.xml.executor": "Run",
+    "TestNG.C:/Users/Shanmugasundharam/Git/Selenium_Hybrid_Framework/Selenium/Runner_Files/run.xml.executor": "Run",
+    "TestNG.C:/Users/Shanmugasundharam/Git/Selenium_Hybrid_Framework/Selenium/Runner_Files/testng.xml.executor": "Run",
+    "TestNG.C:/Users/Shanmugasundharam/Git/Selenium_Hybrid_Framework/Selenium/testng.xml.executor": "Run",
+    "TestNG.Driver_Script (1).executor": "Run",
+    "TestNG.Driver_Script.Initalization.executor": "Run",
+    "TestNG.Driver_Script.executor": "Run",
+    "git-widget-placeholder": "Updated__Code",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Shanmugasundharam/Git/S2",
+    "settings.editor.selected.configurable": "preferences.keymap"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Shanmugasundharam\Git\Selenium_Hybrid_Framework\Selenium\Runner_Files" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Driver_Script" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Selenium_Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Execution_Engine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Execution_Engine" />
+      <option name="MAIN_CLASS_NAME" value="Execution_Engine.Driver_Script" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.Driver_Script" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9a8e733-a06c-4b30-a6ed-6f9d0112c585" name="Changes" comment="" />
+      <created>1738067843473</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738067843473</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="HeadLess" />
+    <option name="LAST_COMMIT_MESSAGE" value="HeadLess" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ReUsable_Codes/Manage_Work_Space/Shot.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
