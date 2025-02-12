@@ -2,7 +2,6 @@ package Config;
 
 import Testcase.S2_Login;
 import java.io.IOException;
-import static Browser_Factory.Browser_Drivers.Initailize_Driver;
 import static Testcase.Create_New_Service_From_Shots.Create_New_Shot_From_Manage_Work_Shot_Screen;
 
 public class Action_Keywords {
@@ -13,8 +12,6 @@ public class Action_Keywords {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("Login Testcase");
-
 
     }
 
@@ -25,7 +22,5 @@ public class Action_Keywords {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("Next Testcase yet to be Updated");
-
     }
 }

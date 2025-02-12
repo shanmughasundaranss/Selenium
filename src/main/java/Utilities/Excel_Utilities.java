@@ -27,7 +27,7 @@ public static void setExcelFile(String path) throws IOException {
 
     }
 
-public static void Excel_Testcases() throws IOException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+public static void Excel_Testcases() throws IOException{
         String Get_Driver_File_Path = Reusable_Library.Get_Value_From_Property_File("Exection_Sheet_Location");
         Excel_Utilities.setExcelFile(Get_Driver_File_Path);
         sheet = workbook.getSheet(Sheet_Name);
@@ -39,7 +39,7 @@ public static void Excel_Testcases() throws IOException, NoSuchMethodException, 
             String Row_Cell = sheet.getRow(a).getCell(8) != null
                     ? sheet.getRow(a).getCell(8).toString()
                     : "Empty";
-            System.out.println("Excel Data Before added to list: " + Row_Cell);
+            //System.out.println("Excel Data Before added to list: " + Row_Cell);
 
             Get_Testcases_From_Excel.add(Row_Cell);
         }
@@ -56,7 +56,7 @@ public static void ActionKeyword_Test_Cases() {
             for (int i = 0; i < methods.length; i++) {
                 String Listofmethods = methods[i].toString();
                 String Trim_Class_Name = Listofmethods.replace("public static void Config.Action_Keywords.", "").trim();
-                System.out.println("Method Name Before Adding to List: " + Trim_Class_Name);
+             //   System.out.println("Method Name Before Adding to List: " + Trim_Class_Name);
                 Get_Testcases_From_ActionKeyword.add(Trim_Class_Name);
             }
         } catch (Throwable e) {
@@ -68,29 +68,22 @@ public static void Testcase_Validator() {
 
         Method[] methods = Action_Keywords.class.getMethods();
         for (Method m : methods) {
-            System.out.println("Available method: " + m.getName());
+          //  System.out.println("Available method: " + m.getName());
 
         }
         if (Get_Testcases_From_ActionKeyword != null) {
-            for (String ActionKeyword_Values : Get_Testcases_From_ActionKeyword) {
-                if (ActionKeyword_Values != null) {
-                    System.out.println("Finaly Value of ActionKeyword Testcase:" + ActionKeyword_Values);
-                    if (Get_Testcases_From_Excel != null) {
                         for (String Excel_Values : Get_Testcases_From_Excel) {
                             if (Excel_Values != null) {
                                 System.out.println("Finaly Value of Excel Testcase:" + Excel_Values);
-                                // Trim any extra spaces
+                                // Trim "()"
                                 Trimmed_Excel_Testcases_Name = Excel_Values.trim().replace("()", "");
                                 // Check if the method exists in Action_Keywords class
                                 if (Get_Testcases_From_ActionKeyword.contains(Excel_Values)) {
-                                    System.out.println("Value " + Excel_Values + " from Column_Values1 is present in aList.");
+                                   // System.out.println("Value " + Excel_Values + " from Column_Values1 is present in aList.");
 
                                     try {
-                                        // Use reflection to check for the method
                                         Method method = Action_Keywords.class.getMethod(Trimmed_Excel_Testcases_Name); // Get the method by name
                                         System.out.println("Check: " + method);
-
-                                        // Call the method via reflection (assuming it's static)
                                         method.invoke(null); // 'null' because it's a static method
 
                                     } catch (NoSuchMethodException e) {
@@ -114,6 +107,3 @@ public static void Testcase_Validator() {
                     }
                 }
             }
-        }
-    }
-}

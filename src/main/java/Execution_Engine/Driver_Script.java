@@ -21,14 +21,15 @@ public class Driver_Script extends Excel_Utilities {
 
 @BeforeSuite
 public static void BeforeSuite() throws IOException {
-    //Initailize_Driver();
+    Reporter.log("BeforeSuite", true);
 
 
 }
 @BeforeTest
 public static void BeforeTest() throws IOException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+    Reporter.log("BeforeTest", true);
     Excel_Testcases();
-    Testcase_Validator();
+
 
 
 
@@ -36,50 +37,45 @@ public static void BeforeTest() throws IOException, InvocationTargetException, N
 @BeforeClass
 public static void BeforeClass(){
 
-
+    Reporter.log("BeforeClass", true);
 
     }
 
 @BeforeMethod
 public static void BeforeMethod(){
-
-
+    Reporter.log("BeforeMethod", true);
 
     }
 @Test
 public static void Initalization() {
-    Reporter.log("Browser Initailized", true);
+    Testcase_Validator();
+    Reporter.log("Test Case Executed", true);
 
 }
 
 
 @AfterMethod
 public static void AfterMethod(){
-
-
+    Reporter.log("AfterMethod", true);
 
     }
 
 @AfterClass
 public static void AfterClass(){
+    Reporter.log("AfterClass", true);
 
-
-
-    }
+}
 @AfterTest
 public static void AfterTest(){
-
+    Reporter.log("AfterTest", true);
     }
 
 @AfterSuite
 public static void AfterSuite(){
 
-    }
-    public static void Call_TestCase_From_Action_keywords () throws IOException {
-
+    Reporter.log("AfterSuite", true);
 
     }
-public static void Launch_Browser () throws IOException {
 
 }
-}
+
